@@ -24,7 +24,7 @@ self.addEventListener('push', (event) => {
     event.waitUntil(
         self.registration.showNotification('Push Notification Title', {
             body: message,
-            icon: 'https://kanatapple.github.io/service-worker/push/images/image.jpg',
+            icon: 'https://pushed-test-mmichi1139592001.codeanyapp.com/service_worker_test/service-worker-gh-pages/push/images/image.jpg',
             tag: 'push-notification-tag'
         })
     );
