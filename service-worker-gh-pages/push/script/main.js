@@ -7,9 +7,10 @@ if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./service-worker.js');
         navigator.serviceWorker.ready
                  .then((registration) => {
-                     return registration.pushManager.subscribe({userVisibleOnly: true});
+                    initialize(registration);
+                     //return registration.pushManager.subscribe({userVisibleOnly: true});
                  })
-                 .then((subscription) => {
+                /* .then((subscription) => {
                      var rawKey = subscription.getKey ? subscription.getKey('p256dh') : '';
                      key.value = rawKey ? btoa(String.fromCharCode.apply(null, new Uint8Array(rawKey))) : '';
             
@@ -18,7 +19,7 @@ if ('serviceWorker' in navigator) {
             
                      endpoint.value = subscription.endpoint;
                      console.log(`GCM EndPoint is: ${subscription.endpoint}`);
-                 })
+                 })*/
                  .catch(console.error.bind(console));
         
         // navigator.serviceWorker.addEventListener('controllerchange', (e) => {

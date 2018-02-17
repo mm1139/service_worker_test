@@ -1,10 +1,10 @@
 {
-  "name": "SW Push Notification",
-  "short_name": "SW Push Notification",
+  "name": "プッシュ通知　テスト",
+  "short_name": "SW Push",
   "icons": [{
-    "src": "https://pushed-test-mmichi1139592001.codeanyapp.com/service_worker_test/service-worker-gh-pages/push/images/image.jpg",
-    "sizes": "192x192",
-    "type": "image/jpg"
+   "src": "https://pushed-test-mmichi1139592001.codeanyapp.com/service_worker_test/service-worker-gh-pages/push/images/image.jpg",
+   "sizes": "192x192",
+   "type": "image/jpg"
   }],
   "start_url": "./index.html",
   "display": "standalone",
