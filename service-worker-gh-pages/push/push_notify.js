@@ -13,6 +13,7 @@ function initialize() {
                             userVisibleOnly: true
                         })
                         .then(subscription => {
+                            console.log("来てる？")
                             showEndpoint(subscription);
                         })
                         .catch(e => console.log(e));
