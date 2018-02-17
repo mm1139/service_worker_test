@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>Push Test</title>
@@ -7,28 +8,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/primer/2.0.2/primer.css">
     <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyA0sEv0fsZN0QX7IGyPAa__tGTZMDI_Kao",
-        authDomain: "pushtest-193920.firebaseapp.com",
-        databaseURL: "https://pushtest-193920.firebaseio.com",
-        projectId: "pushtest-193920",
-        storageBucket: "pushtest-193920.appspot.com",
-        messagingSenderId: "660304697367"
-      };
-      firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA0sEv0fsZN0QX7IGyPAa__tGTZMDI_Kao",
+            authDomain: "pushtest-193920.firebaseapp.com",
+            databaseURL: "https://pushtest-193920.firebaseio.com",
+            projectId: "pushtest-193920",
+            storageBucket: "pushtest-193920.appspot.com",
+            messagingSenderId: "660304697367"
+        };
+        firebase.initializeApp(config);
     </script>
 </head>
+
 <body>
     <h1>Service Worker Push Test</h1>
     <dl class="form">
-        <dt><label>Endpoint URL</label></dt>
-        <dd><textarea id="subscription-endpoint" class="input-block"></textarea></dd>
-        <dt><label>Auth</label></dt>
-        <dd><textarea id="subscription-auth" class="input-block"></textarea></dd>
-        <dt><label>Public Key</label></dt>
-        <dd><textarea id="subscription-public-key" class="input-block"></textarea></dd>
+        <dt>
+            <label>Endpoint URL</label>
+        </dt>
+        <dd>
+            <textarea id="subscription-endpoint" class="input-block"></textarea>
+        </dd>
+        <dt>
+            <label>Auth</label>
+        </dt>
+        <dd>
+            <textarea id="subscription-auth" class="input-block"></textarea>
+        </dd>
+        <dt>
+            <label>Public Key</label>
+        </dt>
+        <dd>
+            <textarea id="subscription-public-key" class="input-block"></textarea>
+        </dd>
     </dl>
     <script src="./script/main.js"></script>
+    <script src="./script/push_notify.js"></script>
 </body>
+
 </html>
