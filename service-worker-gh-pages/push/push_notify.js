@@ -1,19 +1,21 @@
 function initialize() {
     switch (Notification.permission) {
-        case 'granted':
-            console.log("permission = granted");
-            break;
+//         case 'granted':
+//             console.log("permission = granted");
+//             break;
         case 'denied':
             console.log("permisson = denied");
             break;
         case 'default':
+            console.log("来てる？");
             Notification.requestPermission(function (permission) {
                 if (permission === 'granted') {
+                  console.log("来てる？?");
                     ServiceWorkerRegistration.pushManager.subscribe({
                             userVisibleOnly: true
                         })
                         .then(subscription => {
-                            console.log("来てる？")
+                            
                             showEndpoint(subscription);
                         })
                         .catch(e => console.log(e));

@@ -1,6 +1,6 @@
 'use strict';
 
-self.addEventListener('install', (event) => {
+/*self.addEventListener('install', (event) => {
     console.info('install', event);
 
     event.waitUntil(self.skipWaiting());
@@ -15,7 +15,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
     console.info('fetch', event);
 });
-
+*/
 self.addEventListener('push', (event) => {
     console.info('push', event);
 
