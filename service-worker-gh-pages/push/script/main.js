@@ -1,12 +1,12 @@
+alert('test1');
 if ('serviceWorker' in navigator) {
+  alert('test2');
     document.addEventListener('DOMContentLoaded', () => {
-        let endpoint = document.querySelector('#subscription-endpoint');
-        let key = document.querySelector('#subscription-public-key');
-        let auth = document.querySelector('#subscription-auth');
 
         navigator.serviceWorker.register('./service-worker.js');
         navigator.serviceWorker.ready
             .then((registration) => {
+          alert('test!!');
                 initialize(registration);
                 //return registration.pushManager.subscribe({userVisibleOnly: true});
             })
@@ -28,3 +28,4 @@ if ('serviceWorker' in navigator) {
         // }, false);
     }, false);
 }
+
